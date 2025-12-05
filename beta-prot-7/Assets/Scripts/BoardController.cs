@@ -23,11 +23,14 @@ public class BoardController : MonoBehaviour
 
     [Header("Cell Fit Settings")]
     public FitMode fitMode = FitMode.FillCell;
-    public float cardAspect = 0.75f;
+    [Tooltip("Width / Height of card (e.g. 0.75 for 3:4) - used only in KeepAspect mode")]
+    public float cardAspect = 0.75f; // width / height (w/h). if 0 => ignored
 
     [Header("Layout Options")]
+    [Tooltip("How many frames to wait/retry for layout to settle")]
     public int layoutRetries = 3;
 
+    // internal
     private GridLayoutGroup _grid;
     private List<GameObject> _spawnedCards = new List<GameObject>();
     private Coroutine _generateRoutine = null;
@@ -37,63 +40,88 @@ public class BoardController : MonoBehaviour
 
     private void Awake()
     {
-        if (boardContainer == null)
+        // Initialize grid if possible (will try to get from boardContainer later)
+        if (boardContainer != null)
         {
-            Debug.LogError("BoardManager: boardContainer not assigned!");
-        }
-
-        if (cardPrefab == null)
-        {
-            Debug.LogError("BoardManager: cardPrefab not assigned!");
-        }
-
-        _grid = boardContainer.GetComponent<GridLayoutGroup>();
-        if (_grid == null)
-        {
-            _grid = boardContainer.gameObject.AddComponent<GridLayoutGroup>();
+            _grid = boardContainer.GetComponent<GridLayoutGroup>();
         }
     }
 
+    private void Start()
+    {
+        // nothing automatic here - generation should be triggered by GameManager
+    }
+
+    /// <summary>
+    /// Public entry: generate board with provided rows & cols.
+    /// Safe-guards against concurrent generation and missing references.
+    /// </summary>
     public void GenerateBoard(int newRows, int newCols)
     {
-        // guard to avoid concurrent generation
+        // debug guards
+        if (boardContainer == null)
+        {
+            Debug.LogError("BoardController.GenerateBoard: boardContainer is NULL! Assign Board Container in Inspector.");
+            return;
+        }
+        if (cardPrefab == null)
+        {
+            Debug.LogError("BoardController.GenerateBoard: cardPrefab is NULL! Assign Card Prefab in Inspector.");
+            return;
+        }
+        if (spritesPool == null)
+        {
+            Debug.LogWarning("BoardController.GenerateBoard: spritesPool is NULL. Initializing empty list.");
+            spritesPool = new List<Sprite>();
+        }
+
+        // ensure _grid exists
+        if (_grid == null)
+        {
+            _grid = boardContainer.GetComponent<GridLayoutGroup>();
+            if (_grid == null)
+            {
+                Debug.LogError("BoardController.GenerateBoard: GridLayoutGroup missing on boardContainer. Add GridLayoutGroup to the container.");
+                return;
+            }
+        }
+
+        // prevent concurrent generation
         if (isGenerating)
         {
-            Debug.LogWarning("BoardManager: GenerateBoard called while generation is in progress. Ignoring this call.");
+            Debug.LogWarning("BoardController: GenerateBoard called while generation is in progress. Ignoring this call.");
             return;
         }
 
+        // sanitize inputs
         rows = Mathf.Max(1, newRows);
         cols = Mathf.Max(1, newCols);
 
-        // stop any previous routine and clear existing board
+        // stop any previous routine
         if (_generateRoutine != null)
         {
             StopCoroutine(_generateRoutine);
             _generateRoutine = null;
         }
 
-        ClearBoard(); // ensure clean state before generating
+        // clear existing board before generating
+        ClearBoard();
 
+        // configure grid
         _grid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         _grid.constraintCount = cols;
         _grid.spacing = new Vector2(spacing, spacing);
 
+        // start generation
         _generateRoutine = StartCoroutine(ComputeCellSizeAndSpawnRoutine());
-
-        if (newRows * newCols % 2 != 0)
-        {
-            Debug.LogError("Board size must be EVEN for matching game!");
-            return;
-        }
-
     }
 
     private IEnumerator ComputeCellSizeAndSpawnRoutine()
     {
         isGenerating = true;
-        Debug.Log($"BoardManager: Starting generation ({rows}x{cols}).");
+        Debug.Log($"BoardController: Starting generation ({rows}x{cols})");
 
+        // wait a few frames to let UI layout settle
         int tries = Mathf.Max(1, layoutRetries);
         for (int i = 0; i < tries; i++)
         {
@@ -137,25 +165,29 @@ public class BoardController : MonoBehaviour
 
         _grid.cellSize = new Vector2(finalWidth, finalHeight);
 
-        // spawn after layout settled
+        // small wait to allow cell size to apply
         yield return new WaitForEndOfFrame();
+
+        // spawn cards
         yield return StartCoroutine(SpawnCardsAfterLayout());
 
+        // finalize
         isGenerating = false;
         _generateRoutine = null;
+        Debug.Log("BoardController: Generation finished.");
     }
 
     private IEnumerator SpawnCardsAfterLayout()
     {
-        // ensure the cell size applied
+        // final rebuild
         LayoutRebuilder.ForceRebuildLayoutImmediate(boardContainer);
 
         int totalCards = rows * cols;
 
-        // ensure even
+        // enforce even number to ensure pairs (common approach). If you prefer allowing odd, remove this.
         if (totalCards % 2 != 0)
         {
-            Debug.LogWarning($"BoardManager: totalCards ({totalCards}) is odd. Increasing by 1 to make even.");
+            Debug.LogWarning($"BoardController: totalCards ({totalCards}) is odd. Increasing by 1 to make even.");
             totalCards += 1;
         }
 
@@ -167,7 +199,7 @@ public class BoardController : MonoBehaviour
             pairIds.Add(i);
         }
 
-        // shuffle
+        // shuffle pairIds
         for (int i = 0; i < pairIds.Count; i++)
         {
             int j = UnityEngine.Random.Range(i, pairIds.Count);
@@ -176,8 +208,7 @@ public class BoardController : MonoBehaviour
             pairIds[j] = tmp;
         }
 
-        // spawn exactly totalCards (but first ensure container is clean)
-        // Extra safety: remove any stray children just in case
+        // extra safety: clear any leftover children that are not tracked
         for (int i = boardContainer.childCount - 1; i >= 0; i--)
         {
             var child = boardContainer.GetChild(i);
@@ -187,29 +218,31 @@ public class BoardController : MonoBehaviour
             }
         }
 
+        // spawn
         for (int i = 0; i < totalCards; i++)
         {
             GameObject go = Instantiate(cardPrefab, boardContainer);
             go.transform.localScale = Vector3.one;
             AdjustSpawnedRect(go);
-
             _spawnedCards.Add(go);
 
             var cardComp = go.GetComponent<Card>();
             if (cardComp == null)
             {
-                Debug.LogError("Spawned prefab does not contain Card component!");
+                Debug.LogError("BoardController: Spawned prefab does not contain Card component!");
                 continue;
             }
 
             int pid = pairIds[i % pairIds.Count];
-            Sprite front = spritesPool.Count > 0 ? spritesPool[pid % spritesPool.Count] : null;
+            Sprite front = (spritesPool != null && spritesPool.Count > 0) ? spritesPool[pid % spritesPool.Count] : null;
+
+            // initialize card and log if missing sprite
             cardComp.Initialize(pid, front, backSprite);
         }
 
-        // final rebuild and notify
+        // rebuild and notify
         LayoutRebuilder.ForceRebuildLayoutImmediate(boardContainer);
-        Debug.Log($"BoardManager: Spawned {_spawnedCards.Count} cards. CellSize = {_grid.cellSize}");
+        Debug.Log($"BoardController: Spawned {_spawnedCards.Count} cards. CellSize = {_grid.cellSize}");
         OnBoardGenerated?.Invoke();
 
         yield return null;
@@ -232,14 +265,17 @@ public class BoardController : MonoBehaviour
 
     public void ClearBoard()
     {
-        // destroy known spawned
-        foreach (var go in _spawnedCards)
+        // destroy tracked spawned cards
+        for (int i = 0; i < _spawnedCards.Count; i++)
         {
-            if (go != null) Destroy(go);
+            if (_spawnedCards[i] != null)
+            {
+                Destroy(_spawnedCards[i]);
+            }
         }
         _spawnedCards.Clear();
 
-        // also destroy any extra children just in case
+        // also remove any other children in the container (safety)
         for (int i = boardContainer.childCount - 1; i >= 0; i--)
         {
             Destroy(boardContainer.GetChild(i).gameObject);

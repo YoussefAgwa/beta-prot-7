@@ -1,0 +1,815 @@
+fileFormatVersion: 2
+guid: 84f314abb8fc3d345b6428ad426b011d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 267
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a3a9628e8237c458e0960cc8fbaad1
+      internalID: -1277296416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 267
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c106c6b853c1f584e85581abc195332e
+      internalID: 60616339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 267
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2916c7dbb67b1940a85cf3ed91ed41f
+      internalID: -1968367105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 267
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf213367a9154f4eb60ce94a9d53e91
+      internalID: -6738978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 267
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04bc8715756011646ab52670ac60cb66
+      internalID: -1062861085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 267
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0075d29dc438a4e49828fc0e010ac477
+      internalID: 1458017985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 267
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615dd8e7154675245bcc38da78ecd408
+      internalID: 1860527673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 267
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd0253c9292b2a4f9b96f882ffef91a
+      internalID: -1708183202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 189
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c3ca9e5624e62499a1396f9e43d401
+      internalID: 1865713477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 189
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39be30761e241ec40a12437f2bddbf15
+      internalID: 1478131732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 190
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6e96ffb367cf64f910844236e258f2
+      internalID: -691140227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 190
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3548de1c3fbab6142953ede664f55f62
+      internalID: 1495484136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 189
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3e8f788b070624a82fec99cd756b61
+      internalID: -1992088877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 189
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d13f4c8baa420104ea756816418d2f79
+      internalID: -1795999023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 190
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d09dce284e1bd418b5b45308ae881b
+      internalID: -920625135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 189
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae77f6f2e2519d4e8774ffed1ef744e
+      internalID: -1884666178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 112
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d6f7b3071eb5b04da76371a216dcaaa
+      internalID: -1742185620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 112
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08884b678770d74991465895d4be825
+      internalID: 198648493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 112
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: befa8e117d6cb6b49b583295276caca5
+      internalID: -471449185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 112
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f94923643365d45a7ce6a326eaf59d
+      internalID: 1552225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 112
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84240a1d1cb6fa545a3a0227fb07df96
+      internalID: -1572286449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 112
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1757a5cafff9c47a728675687674af
+      internalID: -380261593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_22
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 112
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6685137c2f340fd46b539a33c38b192d
+      internalID: 1909579246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_23
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 112
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d832a3ff61a00f45bcdde7962e4202a
+      internalID: -966467800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_24
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 35
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b15bc68a27c26143a84b1af2fb676f6
+      internalID: -2079678621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_25
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 35
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb5f3e5c53f512946af737fb91083810
+      internalID: -2018025084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_26
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 35
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a13145a82c750c40b2782769ad44004
+      internalID: -1539438193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_27
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 35
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c439e2d103097bb469155d25bf0279df
+      internalID: 61000857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_28
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 35
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc212532c42e7745b9837c2f90fdf31
+      internalID: 1979548337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_29
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 35
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f27c956edc358428c600ed0bbe246e
+      internalID: 1962858143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_30
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 35
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a7c7569a181d94897d244f7c43e2a9
+      internalID: 705694264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: christmas-icons-54450-Photoroom_31
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 35
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f460794f636916e4a85b57f8764396ea
+      internalID: -1616019944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      christmas-icons-54450-Photoroom_0: -1277296416
+      christmas-icons-54450-Photoroom_1: 60616339
+      christmas-icons-54450-Photoroom_10: -691140227
+      christmas-icons-54450-Photoroom_11: 1495484136
+      christmas-icons-54450-Photoroom_12: -1992088877
+      christmas-icons-54450-Photoroom_13: -1795999023
+      christmas-icons-54450-Photoroom_14: -920625135
+      christmas-icons-54450-Photoroom_15: -1884666178
+      christmas-icons-54450-Photoroom_16: -1742185620
+      christmas-icons-54450-Photoroom_17: 198648493
+      christmas-icons-54450-Photoroom_18: -471449185
+      christmas-icons-54450-Photoroom_19: 1552225
+      christmas-icons-54450-Photoroom_2: -1968367105
+      christmas-icons-54450-Photoroom_20: -1572286449
+      christmas-icons-54450-Photoroom_21: -380261593
+      christmas-icons-54450-Photoroom_22: 1909579246
+      christmas-icons-54450-Photoroom_23: -966467800
+      christmas-icons-54450-Photoroom_24: -2079678621
+      christmas-icons-54450-Photoroom_25: -2018025084
+      christmas-icons-54450-Photoroom_26: -1539438193
+      christmas-icons-54450-Photoroom_27: 61000857
+      christmas-icons-54450-Photoroom_28: 1979548337
+      christmas-icons-54450-Photoroom_29: 1962858143
+      christmas-icons-54450-Photoroom_3: -6738978
+      christmas-icons-54450-Photoroom_30: 705694264
+      christmas-icons-54450-Photoroom_31: -1616019944
+      christmas-icons-54450-Photoroom_4: -1062861085
+      christmas-icons-54450-Photoroom_5: 1458017985
+      christmas-icons-54450-Photoroom_6: 1860527673
+      christmas-icons-54450-Photoroom_7: -1708183202
+      christmas-icons-54450-Photoroom_8: 1865713477
+      christmas-icons-54450-Photoroom_9: 1478131732
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
